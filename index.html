@@ -56,19 +56,19 @@
 <body class="h-screen w-screen overflow-hidden text-slate-800 no-select">
 
     <!-- STATE 1: FORM IDENTITAS -->
-    <div id="loginScreen" class="h-full w-full flex items-center justify-center p-4 bg-slate-100">
-        <div class="bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden w-full max-w-4xl flex flex-col md:flex-row">
+    <div id="loginScreen" class="h-full w-full overflow-y-auto bg-slate-100 p-4 flex justify-center items-start md:items-center">
+        <div class="bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden w-full max-w-4xl flex flex-col md:flex-row my-4 md:my-0">
             
             <!-- Sisi Kiri: Branding & Info -->
-            <div class="bg-slate-900 text-white p-10 md:w-5/12 flex flex-col justify-center relative overflow-hidden">
+            <div class="bg-slate-900 text-white p-6 md:p-10 md:w-5/12 flex flex-col justify-center relative overflow-hidden shrink-0">
                 <div class="absolute -top-24 -right-24 w-64 h-64 bg-slate-800 rounded-full opacity-50"></div>
                 <div class="relative z-10">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600 mb-6">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <div class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-blue-600 mb-4 md:mb-6">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
-                    <h1 class="text-3xl font-bold mb-2">Portal Ujian<br>Informatika CBT</h1>
-                    <p class="text-slate-400 text-sm mb-6">Evaluasi Ulangan Harian berstandar internasional dengan sistem keamanan terpadu.</p>
-                    <div class="space-y-3 text-sm text-slate-300">
+                    <h1 class="text-2xl md:text-3xl font-bold mb-2">Portal Ujian<br>Informatika CBT</h1>
+                    <p class="text-slate-400 text-xs md:text-sm mb-4 md:mb-6">Evaluasi Ulangan Harian berstandar internasional dengan sistem keamanan terpadu.</p>
+                    <div class="space-y-3 text-xs md:text-sm text-slate-300">
                         <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 30 Pertanyaan</div>
                         <div class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> Lockdown Browser Aktif</div>
                     </div>
@@ -76,45 +76,45 @@
             </div>
 
             <!-- Sisi Kanan: Form Input -->
-            <div class="p-10 md:w-7/12 flex flex-col justify-center bg-white">
-                <h2 class="text-xl font-bold text-slate-800 mb-6 border-b pb-4">Verifikasi Kandidat</h2>
+            <div class="p-6 md:p-10 md:w-7/12 flex flex-col justify-center bg-white">
+                <h2 class="text-lg md:text-xl font-bold text-slate-800 mb-4 md:mb-6 border-b pb-3 md:pb-4">Verifikasi Kandidat</h2>
                 
-                <div class="space-y-5">
+                <div class="space-y-4 md:space-y-5">
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-2">Nama Lengkap Sesuai Daftar Hadir</label>
-                        <input type="text" id="inputNama" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-medium" placeholder="Cth: Budi Santoso" required>
+                        <input type="text" id="inputNama" class="w-full px-4 py-2.5 md:py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-medium text-sm md:text-base" placeholder="Cth: Budi Santoso" required>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">Kelas</label>
-                            <select id="inputKelas" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-medium">
+                            <select id="inputKelas" class="w-full px-4 py-2.5 md:py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-medium text-sm md:text-base">
                                 <option value="" disabled selected>Pilih Kelas</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-slate-700 mb-2">No. Absen</label>
-                            <select id="inputAbsen" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-medium">
+                            <select id="inputAbsen" class="w-full px-4 py-2.5 md:py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-medium text-sm md:text-base">
                                 <option value="" disabled selected>Pilih Absen</option>
                             </select>
                         </div>
                     </div>
                     
-                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 mt-6 rounded-r-lg">
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-3 md:p-4 mt-4 md:mt-6 rounded-r-lg">
                         <p class="text-xs text-blue-800 font-medium leading-relaxed">
                             <strong>Perhatian:</strong> Mengklik tombol di bawah akan mengunci layar Anda ke mode penuh. Membuka tab lain akan mengunci ujian Anda.
                         </p>
                     </div>
 
                     <!-- Panel Restore Session (Hidden default) -->
-                    <div id="restoreSessionPanel" class="hidden-element bg-yellow-50 border border-yellow-300 p-4 rounded-lg mt-4 shadow-sm">
+                    <div id="restoreSessionPanel" class="hidden-element bg-yellow-50 border border-yellow-300 p-3 md:p-4 rounded-lg mt-3 md:mt-4 shadow-sm">
                         <p class="text-sm text-yellow-800 font-bold mb-1">Sesi Ujian Sebelumnya Ditemukan!</p>
                         <p class="text-xs text-yellow-700 mb-3">Sistem mendeteksi Anda belum menyelesaikan ujian. Data jawaban Anda aman.</p>
-                        <button onclick="restoreSession()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2.5 px-4 rounded-lg transition shadow-md">
+                        <button onclick="restoreSession()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2.5 px-4 rounded-lg transition shadow-md text-sm md:text-base">
                             Lanjutkan Ujian Terakhir
                         </button>
                     </div>
 
-                    <button id="btnMulaiUjian" onclick="startExam()" class="w-full bg-slate-900 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 mt-2 shadow-lg flex justify-center items-center">
+                    <button id="btnMulaiUjian" onclick="startExam()" class="w-full bg-slate-900 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 mt-2 shadow-lg flex justify-center items-center text-sm md:text-base">
                         Masuk Ruang Ujian <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </button>
                 </div>
@@ -125,7 +125,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- STATE 2: LAYAR UJIAN -->
     <div id="examScreen" class="hidden-element h-full w-full flex flex-col bg-slate-50">
